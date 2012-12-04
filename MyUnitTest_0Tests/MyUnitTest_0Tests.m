@@ -8,6 +8,9 @@
 
 #import "MyUnitTest_0Tests.h"
 
+//import Classes to test,
+#import "BasicArithmetic.h"
+
 @implementation MyUnitTest_0Tests
 
 - (void)setUp
@@ -32,6 +35,7 @@
 }
  */
 
+//First test not connected to a class 
 - (void)testMultiplyingTwoNegativeIntegersYieldsPositiveProduct {
     int x = -5;
     int y = -7;
@@ -40,6 +44,24 @@
     //STAssertTrue((product > 0), @"The product was less than zero."); //no tan completo
     STAssertTrue((product > 0), @"The product was less than zero. Product: %d", product);
 
+}
+
+
+//test a simple class
+- (void)testBasicArithmetic {
+    BasicArithmetic *basicMath = [[BasicArithmetic alloc]init];
+    
+    
+    // Did we get back a valid element?
+    STAssertNotNil(basicMath, @"Unable to allocate Atomic Element");
+    //is this usefull?
+    //can I have many Assert in the same method?
+    
+    
+    
+    
+    
+    [basicMath release];
 }
 
 @end
